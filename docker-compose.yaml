@@ -54,7 +54,8 @@ services:
       - "127.0.0.1:8080:8080"
     volumes:
       - ./searxng:/etc/searxng:rw
-      - ./searx:/usr/local/searxng/searx:rw
+      - ./searx/templates:/usr/local/searxng/searx/templates:rw
+      - ./searx/static/themes:/usr/local/searxng/searx/static/themes:rw
     environment:
       - SEARXNG_BASE_URL=https://${SEARXNG_HOSTNAME:-localhost}/
       - UWSGI_WORKERS=${SEARXNG_UWSGI_WORKERS:-4}
