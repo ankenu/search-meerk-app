@@ -8,7 +8,7 @@
 }
 
 #search_header {
-  padding-top: 1.5em;
+  padding-top: 0.5em;
   .ltr-padding-right(2em);
   .ltr-padding-left(@results-offset - 3rem);
   margin: 0;
@@ -233,7 +233,7 @@ html.no-js #clear_search.hide_if_nojs {
 
 @media screen and (max-width: @tablet) {
   #search_header {
-    padding: 1.5em @results-tablet-offset 0 @results-tablet-offset;
+    padding: 0.5em @results-tablet-offset 0 @results-tablet-offset;
     column-gap: @results-tablet-offset;
   }
 
@@ -386,8 +386,8 @@ html.no-js #clear_search.hide_if_nojs {
 .favicon img {
   height: 1.5rem;
   width: 1.5rem;
-  border-radius: 10%;
+  border-radius: 100%;
+  padding: 5px;
   background-color: var(--color-favicon-background-color);
-  border: 1px solid var(--color-favicon-border-color);
   display: flex;
 }
