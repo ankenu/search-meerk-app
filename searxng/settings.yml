@@ -44,7 +44,7 @@ search:
   favicon_resolver: "duckduckgo"
   # Default search language - leave blank to detect from browser information or
   # use codes from 'languages.py'
-  default_lang: "all"
+  default_lang: "auto"
   # max_page: 0  # if engine supports paging, 0 means unlimited numbers of pages
   # Available languages
   # languages:
@@ -118,7 +118,7 @@ ui:
   # Custom static path - leave it blank if you didn't change
   static_path: ""
   # Is overwritten by ${SEARXNG_STATIC_USE_HASH}.
-  static_use_hash: false
+  static_use_hash: true
   # Custom templates path - leave it blank if you didn't change
   templates_path: ""
   # query_in_title: When true, the result page's titles contains the query
@@ -329,6 +329,10 @@ engines:
   - name: bing
     engine: bing
     shortcut: bi
+    disabled: true
+  - name: bing news
+    engine: bing_news
+    shortcut: bin
     disabled: false
   - name: duckduckgo
     engine: duckduckgo
@@ -356,6 +360,13 @@ engines:
     engine: google_videos
     shortcut: gov
     disabled: false
+  - name: startpage
+    engine: startpage
+    shortcut: sp
+    timeout: 6.0
+    disabled: false
+    additional_tests:
+      rosebud: *test_rosebud
   - name: youtube
     shortcut: yt
     # You can use the engine using the official stable API, but you need an API
@@ -372,13 +383,6 @@ engines:
     engine: qwant
     shortcut: qw
     categories: [general, web]
-    disabled: false
-    additional_tests:
-      rosebud: *test_rosebud
-  - name: startpage
-    engine: startpage
-    shortcut: sp
-    timeout: 6.0
     disabled: true
     additional_tests:
       rosebud: *test_rosebud
@@ -396,14 +400,14 @@ engines:
     display_type: ["infobox"]
     tests: *tests_infobox
     categories: [general]
-    disabled: false
+    disabled: true
   - name: wikipedia
     engine: wikipedia
     shortcut: wp
     # add "list" to the array to get results in the results list
     display_type: ["infobox"]
     categories: [general]
-    disabled: false
+    disabled: true
   - name: pinterest
     engine: pinterest
     shortcut: pin
