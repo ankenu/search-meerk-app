@@ -364,7 +364,7 @@ engines:
     engine: startpage
     shortcut: sp
     timeout: 6.0
-    disabled: false
+    disabled: true
     additional_tests:
       rosebud: *test_rosebud
   - name: youtube
