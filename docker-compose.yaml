@@ -56,6 +56,7 @@ services:
       - ./searxng:/etc/searxng:rw
       - ./searx/templates:/usr/local/searxng/searx/templates:rw
       - ./searx/static/themes:/usr/local/searxng/searx/static/themes:rw
+      - ./searx/translations:/usr/local/searxng/searx/translations:rw
     environment:
       - SEARXNG_BASE_URL=https://${SEARXNG_HOSTNAME:-localhost}/
       - UWSGI_WORKERS=${SEARXNG_UWSGI_WORKERS:-4}
