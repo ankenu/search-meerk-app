@@ -11,18 +11,18 @@
   --color-base-font-rgb: 68, 68, 68;
   --color-base-background: #fff;
   --color-base-background-mobile: #f2f5f8;
-  --color-url-font: #334999;
-  --color-url-visited-font: #9822c3;
+  --color-url-font: var(--md-extended-color-custom-blue-color);
+  --color-url-visited-font: var(--md-sys-color-primary);
   /// Header Colors
-  --color-header-background: #fdfbff;
-  --color-header-border: #ddd;
+  --color-header-background: var(--md-sys-color-surface-container);
+  --color-header-border: var(--md-sys-color-outline);
   /// Footer Colors
   --color-footer-background: #fdfbff;
   --color-footer-border: #ddd;
   /// Sidebar Colors
-  --color-sidebar-border: #ddd;
-  --color-sidebar-font: #000;
-  --color-sidebar-background: #fff;
+  --color-sidebar-border: transparent;
+  --color-sidebar-font: var(--md-sys-color-on-surface);
+  --color-sidebar-background: var(--md-sys-color-surface-container-low);
   /// BackToTop Colors
   --color-backtotop-font: #444;
   --color-backtotop-border: #ddd;
@@ -35,8 +35,8 @@
   /// Search Input Colors
   --color-search-border: #bbb;
   --color-search-shadow: 0 2px 8px rgb(34 38 46 / 25%);
-  --color-search-background: #fff;
-  --color-search-font: #222;
+  --color-search-background: var(--md-sys-color-surface-container-high);
+  --color-search-font: var(--md-sys-color-on-surface);
   --color-search-background-hover: #3050ff;
   /// Modal Colors
   --color-error: #db3434;
@@ -126,41 +126,95 @@
   // Favicons Colors
   --color-favicon-background-color: #ddd;
   --color-favicon-border-color: #ccc;
+
+  --md-sys-color-primary: rgb(209 188 253);
+  --md-sys-color-surface-tint: rgb(209 188 253);
+  --md-sys-color-on-primary: rgb(55 38 92);
+  --md-sys-color-primary-container: rgb(78 61 117);
+  --md-sys-color-on-primary-container: rgb(234 221 255);
+  --md-sys-color-secondary: rgb(204 194 219);
+  --md-sys-color-on-secondary: rgb(52 45 65);
+  --md-sys-color-secondary-container: rgb(74 67 88);
+  --md-sys-color-on-secondary-container: rgb(233 222 248);
+  --md-sys-color-tertiary: rgb(219 198 111);
+  --md-sys-color-on-tertiary: rgb(57 48 0);
+  --md-sys-color-tertiary-container: rgb(83 70 0);
+  --md-sys-color-on-tertiary-container: rgb(248 226 135);
+  --md-sys-color-error: rgb(255 180 171);
+  --md-sys-color-on-error: rgb(105 0 5);
+  --md-sys-color-error-container: rgb(147 0 10);
+  --md-sys-color-on-error-container: rgb(255 218 214);
+  --md-sys-color-background: rgb(20 18 24);
+  --md-sys-color-on-background: rgb(231 224 232);
+  --md-sys-color-surface: rgb(20 18 24);
+  --md-sys-color-on-surface: rgb(231 224 232);
+  --md-sys-color-surface-variant: rgb(73 69 78);
+  --md-sys-color-on-surface-variant: rgb(203 196 207);
+  --md-sys-color-outline: rgb(148 143 153);
+  --md-sys-color-outline-variant: rgb(73 69 78);
+  --md-sys-color-shadow: rgb(0 0 0);
+  --md-sys-color-scrim: rgb(0 0 0);
+  --md-sys-color-inverse-surface: rgb(231 224 232);
+  --md-sys-color-inverse-on-surface: rgb(50 47 53);
+  --md-sys-color-inverse-primary: rgb(103 85 142);
+  --md-sys-color-primary-fixed: rgb(234 221 255);
+  --md-sys-color-on-primary-fixed: rgb(34 15 70);
+  --md-sys-color-primary-fixed-dim: rgb(209 188 253);
+  --md-sys-color-on-primary-fixed-variant: rgb(78 61 117);
+  --md-sys-color-secondary-fixed: rgb(233 222 248);
+  --md-sys-color-on-secondary-fixed: rgb(30 25 43);
+  --md-sys-color-secondary-fixed-dim: rgb(204 194 219);
+  --md-sys-color-on-secondary-fixed-variant: rgb(74 67 88);
+  --md-sys-color-tertiary-fixed: rgb(248 226 135);
+  --md-sys-color-on-tertiary-fixed: rgb(34 27 0);
+  --md-sys-color-tertiary-fixed-dim: rgb(219 198 111);
+  --md-sys-color-on-tertiary-fixed-variant: rgb(83 70 0);
+  --md-sys-color-surface-dim: rgb(20 18 24);
+  --md-sys-color-surface-bright: rgb(59 56 62);
+  --md-sys-color-surface-container-lowest: rgb(15 13 19);
+  --md-sys-color-surface-container-low: rgb(29 27 32);
+  --md-sys-color-surface-container: rgb(33 31 36);
+  --md-sys-color-surface-container-high: rgb(43 41 47);
+  --md-sys-color-surface-container-highest: rgb(54 52 58);
+  --md-extended-color-custom-blue-color: rgb(174 198 255);
+  --md-extended-color-custom-blue-on-color: rgb(18 47 96);
+  --md-extended-color-custom-blue-color-container: rgb(44 70 120);
+  --md-extended-color-custom-blue-on-color-container: rgb(216 226 255);
 }
 
 .dark-themes() {
   /// Base Colors
-  --color-base-font: #bbb;
-  --color-base-font-rgb: 187, 187, 187;
-  --color-base-background: #222428;
-  --color-base-background-mobile: #222428;
-  --color-url-font: #8af;
-  --color-url-visited-font: #c09cd9;
+  --color-base-font: var(--md-sys-color-on-surface);
+  --color-base-font-rgb: 231, 224, 232;
+  --color-base-background: var(--md-sys-color-surface);
+  --color-base-background-mobile: var(--md-sys-color-surface);
+  --color-url-font: var(--md-extended-color-custom-blue-color);
+  --color-url-visited-font: var(--md-sys-color-primary);
   /// Header Colors
-  --color-header-background: #1e1e22;
-  --color-header-border: #333;
+  --color-header-background: var(--md-sys-color-surface-container-lowest);
+  --color-header-border: transparent;
   /// Footer Colors
   --color-footer-background: #1e1e22;
   --color-footer-border: #333;
   /// Sidebar Colors
-  --color-sidebar-border: #555;
-  --color-sidebar-font: #fff;
-  --color-sidebar-background: #292c34;
+  --color-sidebar-border: var(--md-sys-color-outline);
+  --color-sidebar-font: var(--md-sys-color-on-surface);
+  --color-sidebar-background: var(--md-sys-color-surface-container-low);
   /// BackToTop Colors
-  --color-backtotop-font: #bbb;
-  --color-backtotop-border: #333;
-  --color-backtotop-background: #2b2e36;
+  --color-backtotop-font: var(--md-sys-color-on-surface);
+  --color-backtotop-border: var(--md-sys-color-outline);
+  --color-backtotop-background: var(--md-sys-color-surface-container);
   /// Button Colors
-  --color-btn-background: #58f;
-  --color-btn-font: #222;
+  --color-btn-background: var(--md-sys-color-primary);
+  --color-btn-font: var(--md-sys-color-on-primary);
   --color-show-btn-background: #555;
   --color-show-btn-font: #fff;
   /// Search Input Colors
-  --color-search-border: #555;
-  --color-search-shadow: 0 2px 8px rgb(34 38 46 / 25%);
-  --color-search-background: #2b2e36;
-  --color-search-font: #fff;
-  --color-search-background-hover: #58f;
+  --color-search-border: var(--md-sys-color-outline);
+  --color-search-shadow: 0 2px 8px var(--md-sys-color-shadow);
+  --color-search-background: var(--md-sys-color-surface-container-high);
+  --color-search-font: var(--md-sys-color-on-surface);
+  --color-search-background-hover: #3050ff;
   /// Modal Colors
   --color-error: #f55b5b;
   --color-error-background: darken(#db3434, 40%);
@@ -169,26 +223,26 @@
   --color-success: #79f56e;
   --color-success-background: darken(#42db34, 40%);
   /// Categories Colors
-  --color-categories-item-selected-font: #58f;
-  --color-categories-item-border-selected: #58f;
+  --color-categories-item-selected-font: var(--md-sys-color-tertiary);
+  --color-categories-item-border-selected: var(--md-sys-color-tertiary);
   /// Autocomplete Colors
-  --color-autocomplete-font: #fff;
-  --color-autocomplete-border: #555;
-  --color-autocomplete-shadow: 0 2px 8px rgb(34 38 46 / 25%);
+  --color-autocomplete-font: var(--md-sys-color-on-surface);
+  --color-autocomplete-border: var(--md-sys-color-outline);
+  --color-autocomplete-shadow: 0 2px 8px var(--md-sys-color-shadow);
   --color-autocomplete-background: #2b2e36;
   --color-autocomplete-background-hover: #1e1e22;
   /// Answer Colors
-  --color-answer-font: #bbb; // same as --color-base-font
+  --color-answer-font: var(--md-sys-color-on-surface); // same as --color-base-font
   --color-answer-background: #26292f;
   /// Results Colors
-  --color-result-background: #26292f;
-  --color-result-border: #333;
-  --color-result-url-font: #fff;
-  --color-result-vim-selected: #1f1f23cc;
-  --color-result-vim-arrow: #8af;
+  --color-result-background: var(--md-sys-color-surface-container-low);
+  --color-result-border: var(--md-sys-color-outline);
+  --color-result-url-font: var(--md-sys-color-on-surface);
+  --color-result-vim-selected: var(--md-sys-color-surface-container-lowest);
+  --color-result-vim-arrow: transparent;
   --color-result-description-highlight-font: #fff;
-  --color-result-link-font: #8af;
-  --color-result-link-font-highlight: #8af;
+  --color-result-link-font: var(--md-extended-color-custom-blue-color);
+  --color-result-link-font-highlight: var(--md-extended-color-custom-blue-color);
   --color-result-link-visited-font: #c09cd9;
   --color-result-publishdate-font: #888;
   --color-result-engines-font: #a4a4a4;
