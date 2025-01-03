@@ -106,9 +106,9 @@
     w.addEventListener('scroll', function () {
       const searchHeaderOffset = searchHeader.offsetHeight;
       if (w.scrollY > searchHeaderOffset - 10) {
-        searchHeader.style.top = '-100px';
-      } else if (w.scrollY < searchHeaderOffset - 20) {
         searchHeader.style.top = '0';
+      } else if (w.scrollY < searchHeaderOffset - 20) {
+        searchHeader.style.top = '-105px';
       }
 
       var e = d.getElementById('backToTop'),
