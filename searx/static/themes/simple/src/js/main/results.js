@@ -103,13 +103,16 @@
     });
 
     const searchHeader = document.getElementById('search');
+    const searchHeaderTopHide = 105
+    let lastScrollY = 0;
     w.addEventListener('scroll', function () {
-      const searchHeaderOffset = searchHeader.offsetHeight;
-      if (w.scrollY > searchHeaderOffset - 10) {
-        searchHeader.style.top = '0';
-      } else if (w.scrollY < searchHeaderOffset - 20) {
+      const currentScrollY = w.scrollY;
+      if (currentScrollY > lastScrollY || (currentScrollY < searchHeaderTopHide * 3 && currentScrollY - searchHeaderTopHide > 0)) {
         searchHeader.style.top = '-105px';
+      } else {
+        searchHeader.style.top = '0';
       }
+      lastScrollY = currentScrollY;
 
       var e = d.getElementById('backToTop'),
         scrollTop = document.documentElement.scrollTop || document.body.scrollTop,
