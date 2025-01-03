@@ -186,15 +186,15 @@
   /// Base Colors
   --color-base-font: var(--md-sys-color-on-surface);
   --color-base-font-rgb: 231, 224, 232;
-  --color-base-background: var(--md-sys-color-surface);
+  --color-base-background: var(--md-sys-color-surface-container);
   --color-base-background-mobile: var(--md-sys-color-surface);
   --color-url-font: var(--md-extended-color-custom-blue-color);
   --color-url-visited-font: var(--md-sys-color-primary);
   /// Header Colors
-  --color-header-background: var(--md-sys-color-surface-container);
+  --color-header-background: var(--md-sys-color-surface-container-low);
   --color-header-border: transparent;
   /// Footer Colors
-  --color-footer-background: var(--md-sys-color-surface-container-lowest);
+  --color-footer-background: var(--md-sys-color-surface-container-low);
   --color-footer-border: transparent;
   /// Sidebar Colors
   --color-sidebar-border: transparent;
@@ -216,8 +216,8 @@
   --color-search-font: var(--md-sys-color-on-surface);
   --color-search-background-hover: var(--md-sys-color-primary);
   /// Modal Colors
-  --color-error: #f55b5b;
-  --color-error-background: darken(#db3434, 40%);
+  --color-error: var(--md-sys-color-on-error-container);
+  --color-error-background: var(--md-sys-color-error-container);
   --color-warning: #f1d561;
   --color-warning-background: darken(#dbba34, 40%);
   --color-success: #79f56e;
@@ -230,7 +230,7 @@
   --color-autocomplete-border: var(--md-sys-color-outline);
   --color-autocomplete-shadow: 0 2px 8px var(--md-sys-color-shadow);
   --color-autocomplete-background: var(--md-sys-color-surface-container-high);
-  --color-autocomplete-background-hover: #1e1e22;
+  --color-autocomplete-background-hover: var(--md-sys-color-surface-container-highest);
   /// Answer Colors
   --color-answer-font: var(--md-sys-color-on-primary-container); // same as --color-base-font
   --color-answer-background: var(--md-sys-color-primary-container);
@@ -243,7 +243,7 @@
   --color-result-description-highlight-font: #fff;
   --color-result-link-font: var(--md-extended-color-custom-blue-color);
   --color-result-link-font-highlight: var(--md-extended-color-custom-blue-color);
-  --color-result-link-visited-font: #c09cd9;
+  --color-result-link-visited-font: var(--md-sys-color-primary);
   --color-result-publishdate-font: #888;
   --color-result-engines-font: var(--md-sys-color-on-surface-variant);
   --color-result-search-url-border: #555;
