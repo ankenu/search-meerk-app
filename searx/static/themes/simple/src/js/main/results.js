@@ -102,7 +102,15 @@
       searxng.selectNext(false);
     });
 
+    const searchHeader = document.getElementById('search');
     w.addEventListener('scroll', function () {
+      const searchHeaderOffset = searchHeader.offsetHeight;
+      if (w.scrollY > searchHeaderOffset - 10) {
+        searchHeader.style.top = '-100px';
+      } else if (w.scrollY < searchHeaderOffset - 20) {
+        searchHeader.style.top = '0';
+      }
+
       var e = d.getElementById('backToTop'),
         scrollTop = document.documentElement.scrollTop || document.body.scrollTop,
         results = d.getElementById('results');
