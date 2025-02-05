@@ -15,7 +15,7 @@ general:
   # expose stats in open metrics format at /metrics
   # leave empty to disable (no password set)
   # open_metrics: <password>
-  open_metrics: ''
+  open_metrics: ""
 
 brand:
   new_issue_url: https://github.com/searxng/searxng/issues/new
@@ -44,7 +44,7 @@ search:
   favicon_resolver: "duckduckgo"
   # Default search language - leave blank to detect from browser information or
   # use codes from 'languages.py'
-  default_lang: "auto"
+  default_lang: "all"
   # max_page: 0  # if engine supports paging, 0 means unlimited numbers of pages
   # Available languages
   # languages:
@@ -84,7 +84,7 @@ server:
   bind_address: "127.0.0.1"
   # public URL of the instance, to ensure correct inbound links. Is overwritten
   # by ${SEARXNG_URL}.
-  base_url: false  # "http://example.com/location"
+  base_url: false # "http://example.com/location"
   # rate limit the number of request on the instance, block some bots.
   # Is overwritten by ${SEARXNG_LIMITER}
   limiter: true
@@ -95,7 +95,7 @@ server:
   # If your instance owns a /etc/searxng/settings.yml file, then set the following
   # values there.
 
-  secret_key: "secret_key"  # Is overwritten by ${SEARXNG_SECRET}
+  secret_key: "ultrasecretkey" # Is overwritten by ${SEARXNG_SECRET}
   # Proxy image results through SearXNG. Is overwritten by ${SEARXNG_IMAGE_PROXY}
   image_proxy: true
   # 1.0 and 1.1 are supported
@@ -139,7 +139,6 @@ ui:
   results_on_new_tab: true
   theme_args:
     # style of simple theme: auto, light, dark
-    simple_style: dark
     savannah_style: dark
   # Perform search immediately if a category selected.
   # Disable to select multiple categories at once and start the search manually.
@@ -291,17 +290,17 @@ checker:
         lang: en
       result_container:
         - not_empty
-        - ['one_title_contains', 'citizen kane']
+        - ["one_title_contains", "citizen kane"]
       test:
         - unique_results
 
     android: &test_android
       matrix:
-        query: ['android']
-        lang: ['en', 'de', 'fr', 'zh-CN']
+        query: ["android"]
+        lang: ["en", "de", "fr", "zh-CN"]
       result_container:
         - not_empty
-        - ['one_title_contains', 'google']
+        - ["one_title_contains", "google"]
       test:
         - unique_results
 
@@ -415,11 +414,11 @@ engines:
     disabled: true
 
 doi_resolvers:
-  oadoi.org: 'https://oadoi.org/'
-  doi.org: 'https://doi.org/'
-  doai.io: 'https://dissem.in/'
-  sci-hub.se: 'https://sci-hub.se/'
-  sci-hub.st: 'https://sci-hub.st/'
-  sci-hub.ru: 'https://sci-hub.ru/'
+  oadoi.org: "https://oadoi.org/"
+  doi.org: "https://doi.org/"
+  doai.io: "https://dissem.in/"
+  sci-hub.se: "https://sci-hub.se/"
+  sci-hub.st: "https://sci-hub.st/"
+  sci-hub.ru: "https://sci-hub.ru/"
 
-default_doi_resolver: 'oadoi.org'
+default_doi_resolver: "oadoi.org"
