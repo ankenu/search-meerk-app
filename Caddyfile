@@ -2,7 +2,7 @@
   admin off
 }
 
-{$SEARXNG_HOSTNAME}:8843 {
+{$SEARXNG_HOSTNAME}:8443 {
   log {
         output discard
   }
