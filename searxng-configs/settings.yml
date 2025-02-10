@@ -407,11 +407,41 @@ engines:
     # add "list" to the array to get results in the results list
     display_type: ["infobox"]
     categories: [general]
-    disabled: true
+    disabled: false
   - name: pinterest
     engine: pinterest
     shortcut: pin
     disabled: true
+  - name: brave
+    engine: brave
+    shortcut: br
+    time_range_support: true
+    paging: true
+    categories: [general, web]
+    brave_category: search
+    disabled: false
+    # brave_spellcheck: true
+  - name: brave.images
+    engine: brave
+    network: brave
+    shortcut: brimg
+    categories: [images, web]
+    brave_category: images
+    disabled: false
+  - name: brave.videos
+    engine: brave
+    network: brave
+    shortcut: brvid
+    categories: [videos, web]
+    brave_category: videos
+    disabled: false
+  - name: brave.news
+    engine: brave
+    network: brave
+    shortcut: brnews
+    categories: news
+    brave_category: news
+    disabled: false
 
 doi_resolvers:
   oadoi.org: "https://oadoi.org/"
